@@ -6,8 +6,6 @@ ADD swftools swftools
 
 WORKDIR swftools
 
-RUN find | grep "\.o$"  | xargs rm || true
-
 RUN ./configure --enable-optimizations --prefix=/build 
 
 # Little kostil for faster and not failing builds, because autotools seems to not support multiprocess builds
